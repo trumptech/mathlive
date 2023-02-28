@@ -13,11 +13,10 @@
   },
   "bugs": "https://github.com/arnog/mathlive/issues/",
   "scripts": {
-    "build": "bash ./scripts/build.sh",
+    "build": "bash ./scripts/build.sh production",
     "clean": "bash ./scripts/clean.sh",
     "dist": "bash ./scripts/build.sh production; bash ./scripts/test.sh",
     "lint": "eslint --fix src/",
-    "prepare": "bash ./scripts/build.sh production",
     "start": "bash ./scripts/start.sh",
     "test": "bash ./scripts/test.sh",
     "version": "bash ./scripts/version.sh",
