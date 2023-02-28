@@ -22,9 +22,6 @@ if [ "$#" -gt 1 ]; then
     exit 1
 fi
 
-# Check that correct version of npm and node are installed
-npx check-node-version --package
-
 # If no "node_modules" directory, do an install first
 if [ ! -d "./node_modules" ]; then
     printf "$BASENAME${DOT}Installing dependencies"
@@ -53,7 +50,7 @@ echo -e  $LINECLEAR$BASENAME$CHECK${DIM}"Cleaning output directories"$RESET
 
 
 # Bundle Typescript declaration files (.d.ts).
-# Even though we only generate declaration files, the target must be set 
+# Even though we only generate declaration files, the target must be set
 # high-enough to prevent `tsc` from complaining (!)
 printf "$BASENAME${DOT}Building TypeScript declaration files (.d.ts)"
 npx tsc --project ./tsconfig.json --declaration --emitDeclarationOnly --outDir ./declarations

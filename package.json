@@ -88,7 +88,7 @@
   ],
   "engines": {
     "npm": ">=8.5.0",
-    "node": ">=16.14.2"
+    "node": ">=14.15.0"
   },
   "prettier": "@cortex-js/prettier-config",
   "devDependencies": {
